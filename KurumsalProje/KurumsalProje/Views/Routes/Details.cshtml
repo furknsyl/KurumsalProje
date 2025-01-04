@@ -1,0 +1,101 @@
+﻿@model KurumsalProje.ViewModels.RouteViewModel.RouteViewModel
+
+@{
+    ViewBag.Title = "Rota Detayları";
+}
+
+<h2>Rota Detayları</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Firma Kodu</th>
+        <td>@Model.COMCODE</td>
+    </tr>
+    <tr>
+        <th>Rota Tipi</th>
+        <td>@Model.ROTDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Rota Kodu</th>
+        <td>@Model.ROTDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Başlangıç</th>
+        <td>@Model.ROTDOCFROM.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Bitiş</th>
+        <td>@Model.ROTDOCUNTIL.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Malzeme Tipi</th>
+        <td>@Model.MATDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Malzeme Kodu</th>
+        <td>@Model.MATDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Miktar</th>
+        <td>@Model.QUANTITY</td>
+    </tr>
+    <tr>
+        <th>Çizim Numarası</th>
+        <td>@Model.DRAWNUM</td>
+    </tr>
+    <tr>
+        <th>Operasyon Numarası</th>
+        <td>@Model.OPRNUM</td>
+    </tr>
+    <tr>
+        <th>İş Merkezi Tipi</th>
+        <td>@Model.WCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>İş Merkezi Kodu</th>
+        <td>@Model.WCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Operasyon Kodu</th>
+        <td>@Model.OPRDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Operasyon Hazırlık Süresi</th>
+        <td>@Model.SETUPTIME</td>
+    </tr>
+    <tr>
+        <th>Operasyon Makine Süresi</th>
+        <td>@Model.MACHINETIME</td>
+    </tr>
+    <tr>
+        <th>Operasyon İşçilik Süresi</th>
+        <td>@Model.LABOURTIME</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Tipi</th>
+        <td>@Model.BOMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Kodu</th>
+        <td>@Model.BOMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>İçerik Numarası</th>
+        <td>@Model.CONTENTNUM</td>
+    </tr>
+    <tr>
+        <th>Bileşen Numarası</th>
+        <td>@Model.COMPONENT</td>
+    </tr>
+    <tr>
+        <th>Silindi mi ?</th>
+        <td>@(Model.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Pasif mi ?</th>
+        <td>@(Model.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+
+</table>
+
+<a href="@Url.Action("Index", "Routes")" class="btn btn-primary">Geri Dön</a>

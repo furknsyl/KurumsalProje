@@ -1,0 +1,37 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCECCM001>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Maliyet Merkezi Bilgileri</h2>
+<br />
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Maliyet Merkezi Tipi</th>
+        <th>Maliyet Merkezi Tipi Açıklaması</th>
+        <th>Pasif mi ?</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.DOCTYPE</td>
+            <td>@item.DOCTYPETEXT</td>
+            <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+            <td><a href="/CostCenterType/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/CostCenterType/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+
+    }
+</table>
+
+<a href="/CostCenterType/YeniKayıt" class="btn btn-primary">Yeni Maliyet Merkezi Ekle</a>

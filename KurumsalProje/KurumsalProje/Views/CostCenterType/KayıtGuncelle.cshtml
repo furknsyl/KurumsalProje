@@ -1,0 +1,32 @@
+﻿@model KurumsalProje.Models.BSMGRBCECCM001
+
+@{
+    ViewBag.Title = "Kayıt Güncelle";
+}
+
+<h2>Kayıt Güncelle</h2>
+
+<form action="/CostCenterType/KayıtGuncelle" method="post">
+    <!-- COMCODE'yi gizli bir alan olarak gönder -->
+    <input type="hidden" name="COMCODE" value="@Model.COMCODE" />
+
+    <div class="form-group">
+        <label>Maliyet Merkezi Tipi</label>
+        <input type="text" name="DOCTYPE" value="@Model.DOCTYPE" class="form-control" maxlength="4" />
+    </div>
+
+    <div class="form-group">
+        <label>Maliyet Merkezi Tipi Açıklaması</label>
+        <input type="text" name="DOCTYPETEXT" value="@Model.DOCTYPETEXT" class="form-control" />
+    </div>
+
+    <label>Pasif mi ?</label>
+    <!-- DropDownList kullanımı -->
+    <select id="ISPASSIVE" name="ISPASSIVE" class="form-control">
+        <option value="0">Hayır</option>
+        <option value="1">Evet</option>
+    </select>
+    <br />
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

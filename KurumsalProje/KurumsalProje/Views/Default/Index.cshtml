@@ -1,0 +1,42 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCEGEN001>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Firma Bilgileri</h2>
+<br />
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Adı</th>
+        <th>Adres 1</th>
+        <th>Adres 2</th>
+        <th>Şehir Kodu</th>
+        <th>Ülke Kodu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.COMTEXT</td>
+            <td>@item.ADDRESS1</td>
+            <td>@item.ADDRESS2</td>
+            <td>@item.CITYCODE</td>
+            <td>@item.COUNTRYCODE</td>
+            <td><a href="/Default/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Default/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+
+    }
+</table>
+
+<a href="/Default/YeniKayıt" class="btn btn-primary">Yeni Firma Ekle</a>

@@ -1,0 +1,40 @@
+﻿@model KurumsalProje.Models.BSMGRBCEGEN004
+
+@{
+    ViewBag.Title = "Kayıt Güncelle";
+}
+
+<h2>Kayıt Güncelle</h2>
+
+<form action="/City/KayıtGuncelle" method="post">
+    <!-- COMCODE'yi gizli bir alan olarak gönder -->
+    <input type="hidden" name="COMCODE" value="@Model.COMCODE" />
+
+    <div class="form-group">
+        <label>Şehir Kodu</label>
+        <input type="text" name="CITYCODE" value="@Model.CITYCODE" class="form-control" maxlength="3" required />
+    </div>
+
+    <div class="form-group">
+        <label>Şehir Adı</label>
+        <input type="text" name="CITYTEXT" value="@Model.CITYTEXT" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Ülke Kodu</label>
+        <!-- DropDownList -->
+        <select name="COUNTRYCODE" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.COUNTRYList as List<SelectListItem>)
+            {
+                <option value="@item.Value" @(item.Value == Model.COUNTRYCODE ? "selected" : "")>
+                    @item.Text
+                </option>
+            }
+        </select>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

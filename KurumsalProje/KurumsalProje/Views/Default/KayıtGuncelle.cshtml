@@ -1,0 +1,58 @@
+﻿@model KurumsalProje.Models.BSMGRBCEGEN001
+
+@{
+    ViewBag.Title = "Kayıt Güncelle";
+}
+
+<h2>Kayıt Güncelle</h2>
+
+<form action="/Default/KayıtGuncelle" method="post">
+    <input type="hidden" name="COMCODE" value="@Model.COMCODE" />
+
+    <div class="form-group">
+        <label>Şirket Adı</label>
+        <input type="text" name="COMTEXT" value="@Model.COMTEXT" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Adres 1</label>
+        <input type="text" name="ADDRESS1" value="@Model.ADDRESS1" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Adres 2</label>
+        <input type="text" name="ADDRESS2" value="@Model.ADDRESS2" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Şehir Kodu</label>
+        <!-- DropDownList -->
+        <select name="CITYCODE" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.CITYList as List<SelectListItem>)
+            {
+                <option value="@item.Value" @(item.Value == Model.CITYCODE ? "selected" : "")>
+                    @item.Text
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Ülke Kodu</label>
+        <!-- DropDownList -->
+        <select name="COUNTRYCODE" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.COUNTRYList as List<SelectListItem>)
+            {
+                <option value="@item.Value" @(item.Value == Model.COUNTRYCODE ? "selected" : "")>
+                    @item.Text
+                </option>
+            }
+        </select>
+    </div>
+    
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

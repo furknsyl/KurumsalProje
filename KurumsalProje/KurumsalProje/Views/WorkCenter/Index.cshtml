@@ -1,0 +1,52 @@
+﻿@model IEnumerable<KurumsalProje.ViewModels.WorkCenterViewModels.WorkCenterViewModel>
+
+@{
+    ViewBag.Title = "Work Center List";
+}
+
+<h2>İş Merkezleri</h2>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firma Kodu</th>
+            <th>İş Merkezi Tipi</th>
+            <th>Maliyet Merkezi Tipi</th>
+            <th>Günlük Çalışma Saati</th>
+            <th>Operasyon Kodu</th>
+            <th>Dil Kodu</th>
+            <th>Kısa Açıklama</th>
+            <th>Geçerlilik Başlangıç</th>
+            <th>Geçerlilik Bitiş</th>
+            <th>Silindi mi ?</th>
+            <th>Pasif mi ?</th>
+            <th>Detaylar</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.COMCODE</td>
+                <td>@item.WCMDOCTYPE</td>
+                <td>@item.CCMDOCTYPE</td>
+                <td>@item.WORKTIME</td>
+                <td>@item.OPRDOCTYPE</td>
+                <td>@item.LANCODE</td>
+                <td>@item.WCMSTEXT</td>
+                <td>@item.WCMDOCFROM.ToShortDateString()</td>
+                <td>@item.WCMDOCUNTIL.ToShortDateString()</td>
+                <td>@(item.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+                <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+                <td><a href="@Url.Action("Details", "WorkCenter", new { comcode = item.COMCODE, wcmdoctype = item.WCMDOCTYPE, wcmdocnum = item.WCMDOCNUM })" class="btn btn-primary">Detaylar</a></td>
+                <td><a href="/WorkCenter/Delete/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+                <td><a href="@Url.Action("Edit", "WorkCenter", new { comcode = item.COMCODE, wcmdoctype = item.WCMDOCTYPE, wcmdocnum = item.WCMDOCNUM })" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "WorkCenter")" class="btn btn-success">Yeni Kayıt Ekle</a>

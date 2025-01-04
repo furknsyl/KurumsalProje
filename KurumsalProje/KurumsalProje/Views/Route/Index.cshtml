@@ -1,0 +1,36 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCEROT001>
+@{
+    ViewBag.Title = "Index";
+}
+
+<a href="/Route/YeniKayıt" class="btn btn-primary">Yeni Rota Tipi Ekle</a>
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Rota Tipi</th>
+        <th>Rota Tipi Açıklaması</th>
+        <th>Pasif mi ?</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.DOCTYPE</td>
+            <td>@item.DOCTYPETEXT</td>
+            <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+            <td><a href="/Route/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Route/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+
+    }
+</table>
+

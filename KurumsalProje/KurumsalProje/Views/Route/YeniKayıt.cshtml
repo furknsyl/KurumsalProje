@@ -1,0 +1,37 @@
+﻿@model KurumsalProje.Models.BSMGRBCEROT001
+
+@{
+    ViewBag.Title = "YeniKayıt";
+
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="COMCODE">Firma Kod</label>
+        <!-- COMCODE için DropDownList -->
+        <select id="COMCODE" name="COMCODE" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.COMCODEList as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <br />
+    <label>Rota Tipi</label>
+    @Html.TextBoxFor(x => x.DOCTYPE, new { @class = "form-control", maxlength = "4" })
+    <br />
+    <label>Rota Tipi Açıklaması</label>
+    @Html.TextBoxFor(x => x.DOCTYPETEXT, new { @class = "form-control" })
+    <br />
+    <label>Pasif mi ?</label>
+    <!-- DropDownList kullanımı -->
+    <select id="ISPASSIVE" name="ISPASSIVE" class="form-control">
+        <option value="0">Hayır</option>
+        <option value="1">Evet</option>
+    </select>
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

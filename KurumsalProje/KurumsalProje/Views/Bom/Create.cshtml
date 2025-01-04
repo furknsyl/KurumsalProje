@@ -1,0 +1,155 @@
+﻿@model KurumsalProje.ViewModels.BomViewModels.BomViewModel
+
+<h2>Yeni Ürün Ağacı Ekle</h2>
+<br />
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="COMCODE">Firma Kod</label>
+                <select id="COMCODE" name="COMCODE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.COMCODEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCTYPE">Ürün Ağacı Tipi</label>
+                <select id="BOMDOCTYPE" name="BOMDOCTYPE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.BOMDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCNUM">Ürün Ağacı Kodu</label>
+                <input type="text" id="BOMDOCNUM" name="BOMDOCNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCFROM">Geçerlilik Başlangıç</label>
+                <input type="date" id="BOMDOCFROM" name="BOMDOCFROM" class="form-control" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCUNTIL">Geçerlilik Bitiş</label>
+                <input type="date" id="BOMDOCUNTIL" name="BOMDOCUNTIL" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MATDOCTYPE">Malzeme Tipi</label>
+                <select id="MATDOCTYPE" name="MATDOCTYPE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.MATDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MATDOCNUM">Malzeme Kodu</label>
+                <input type="text" id="MATDOCNUM" name="MATDOCNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="QUANTITY">Miktar</label>
+                <input type="number" id="QUANTITY" name="QUANTITY" class="form-control" step="1" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="DRAWNUM">Çizim Numarası</label>
+                <input type="text" id="DRAWNUM" name="DRAWNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="CONTENTNUM">İçerik Numarası</label>
+                <input type="number" id="CONTENTNUM" name="CONTENTNUM" class="form-control"  required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISDELETED">Silindi mi?</label>
+                <select id="ISDELETED" name="ISDELETED" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    <option value="0">Hayır</option>
+                    <option value="1">Evet</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISPASSIVE">Pasif mi?</label>
+                <select id="ISPASSIVE" name="ISPASSIVE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    <option value="0">Hayır</option>
+                    <option value="1">Evet</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="COMPONENT">Bileşen</label>
+                <input type="text" id="COMPONENT" name="COMPONENT" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="COMPBOMDOCTYPE">Kalem Ürün Ağacı Tipi</label>
+                <select id="COMPBOMDOCTYPE" name="COMPBOMDOCTYPE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.COMPBOMDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="COMPBOMDOCNUM">Kalem Ürün Ağacı Kodu</label>
+                <input type="text" id="COMPBOMDOCNUM" name="COMPBOMDOCNUM" class="form-control" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>

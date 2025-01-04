@@ -1,0 +1,61 @@
+﻿@model KurumsalProje.ViewModels.CostCenterViewModels.CostCenterViewModel
+
+@{
+    ViewBag.Title = "Maliyet Merkezleri";
+}
+
+<h2>Maliyet Merkezleri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Firma Kodu</th>
+        <td>@Model.COMCODE</td>
+    </tr>
+    <tr>
+        <th>Maliyet Merkezi Tipi</th>
+        <td>@Model.CCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Maliyet Merkezi Kodu</th>
+        <td>@Model.CCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Başlangıç</th>
+        <td>@Model.CCMDOCFROM.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Bitiş</th>
+        <td>@Model.CCMDOCUNTIL.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Ana Maliyet Merkezi Tipi</th>
+        <td>@Model.MAINCCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Ana Maliyet Merkezi Kodu</th>
+        <td>@Model.MAINCCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Dil Kodu</th>
+        <td>@Model.LANCODE</td>
+    </tr>
+    <tr>
+        <th>Kısa Açıklama</th>
+        <td>@Model.CCMSTEXT</td>
+    </tr>
+    <tr>
+        <th>Uzun Açıklama</th>
+        <td>@Model.CCMLTEXT</td>
+    </tr>
+    <tr>
+        <th>Silindi mi ?</th>
+        <td>@(Model.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Pasif mi ?</th>
+        <td>@(Model.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+
+</table>
+
+<a href="@Url.Action("Index", "CostCenter")" class="btn btn-primary">Geri Dön</a>

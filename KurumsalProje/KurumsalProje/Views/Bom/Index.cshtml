@@ -1,0 +1,51 @@
+﻿@model IEnumerable<KurumsalProje.ViewModels.BomViewModels.BomViewModel>
+@{
+    ViewBag.Title = "Bom Center List";
+}
+
+<h2>Ürün Ağaçları</h2>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firma Kodu</th>
+            <th>Ürün Ağacı Tipi</th>
+            <th>Ürün Ağacı Kodu</th>
+            <th>Malzeme Tipi</th>
+            <th>Miktar</th>
+            <th>İçerik Numarası</th>
+            <th>Bileşen Kodu</th>
+            <th>Geçerlilik Başlangıç</th>
+            <th>Geçerlilik Bitiş</th>
+            <th>Silindi mi ?</th>
+            <th>Pasif mi ?</th>
+            <th>Detaylar</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.COMCODE</td>
+                <td>@item.BOMDOCTYPE</td>
+                <td>@item.BOMDOCNUM</td>
+                <td>@item.MATDOCTYPE</td>
+                <td>@item.QUANTITY</td>
+                <td>@item.CONTENTNUM</td>
+                <td>@item.COMPONENT</td>
+                <td>@item.BOMDOCFROM.ToShortDateString()</td>
+                <td>@item.BOMDOCUNTIL.ToShortDateString()</td>
+                <td>@(item.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+                <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+                <td><a href="@Url.Action("Details", "Bom", new { comcode = item.COMCODE, bomdoctype = item.BOMDOCTYPE, bomdocnum = item.BOMDOCNUM })" class="btn btn-primary">Detaylar</a></td>
+                <td><a href="/Bom/Delete/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+                <td><a href="@Url.Action("Edit", "Bom", new { comcode = item.COMCODE, bomdoctype = item.BOMDOCTYPE, bomdocnum = item.BOMDOCNUM })" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Bom")" class="btn btn-success">Yeni Kayıt Ekle</a>

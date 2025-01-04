@@ -1,0 +1,55 @@
+﻿@model IEnumerable<KurumsalProje.ViewModels.MaterialViewModels.MalzemeKayitViewModel>
+
+@{
+    ViewBag.Title = "Malzeme Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Malzeme Listesi</h2>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firma Kodu</th>
+            <th>Malzeme Tipi</th>
+            <th>Malzeme Kodu</th>
+            <th>Stok Birimi</th>
+            <th>Dil Kodu</th>
+            <th>Kısa Açıklama</th>
+            <th>Geçerlilik Başlangıç</th>
+            <th>Geçerlilik Bitiş</th>
+            <th>Kısa Açıklama</th>
+            <th>Silindi mi ?</th>
+            <th>Pasif mi ?</th>
+            <th>Detaylar</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.COMCODE</td>
+                <td>@item.MATDOCTYPE</td>
+                <td>@item.MATDOCNUM</td>
+                <td>@item.STUNIT</td>
+                <td>@item.LANCODE</td>
+                <td>@item.MATSTEXT</td>
+                <td>@item.MATDOCFROM.ToShortDateString()</td>
+                <td>@item.MATDOCUNTIL.ToShortDateString()</td>
+                <td>@item.MATSTEXT</td>
+                <td>@(item.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+                <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+                <td><a href="@Url.Action("Detay", "Malzeme", new { comcode = item.COMCODE, matdoctype = item.MATDOCTYPE, matdocnum = item.MATDOCNUM })" class="btn btn-primary">Detaylar</a></td>
+                <td><a href="/Malzeme/MalzemeSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+                <td><a href="@Url.Action("KayıtGuncelle", "Malzeme", new { comcode = item.COMCODE, matdoctype = item.MATDOCTYPE, matdocnum = item.MATDOCNUM })" class="btn btn-warning">Güncelle</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("YeniKayıt", "Malzeme")" class="btn btn-success">Yeni Kayıt Ekle</a>

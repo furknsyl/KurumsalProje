@@ -1,0 +1,77 @@
+﻿@model KurumsalProje.ViewModels.WorkCenterViewModels.WorkCenterViewModel
+
+@{
+    ViewBag.Title = "İş Merkezi Detayları";
+}
+
+<h2>İş Merkezi Detayları</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Firma Kodu</th>
+        <td>@Model.COMCODE</td>
+    </tr>
+    <tr>
+        <th>İş Merkezi Tipi</th>
+        <td>@Model.WCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>İş Merkezi Kodu</th>
+        <td>@Model.WCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Başlangıç</th>
+        <td>@Model.WCMDOCFROM.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Bitiş</th>
+        <td>@Model.WCMDOCUNTIL.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Ana İş Merkezi Tipi</th>
+        <td>@Model.MAINWCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Ana İş Merkezi Kodu</th>
+        <td>@Model.MAINWCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Maliyet Merkezi Tipi</th>
+        <td>@Model.CCMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Maliyet Merkezi Kodu</th>
+        <td>@Model.CCMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Çalışma Süresi (Saat)</th>
+        <td>@Model.WORKTIME</td>
+    </tr>
+    <tr>
+        <th>Dil Kodu</th>
+        <td>@Model.LANCODE</td>
+    </tr>
+    <tr>
+        <th>Kısa Açıklama</th>
+        <td>@Model.WCMSTEXT</td>
+    </tr>
+    <tr>
+        <th>Uzun Açıklama</th>
+        <td>@Model.WCMLTEXT</td>
+    </tr>
+    <tr>
+        <th>Operasyon Kodu</th>
+        <td>@Model.OPRDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Silindi mi ?</th>
+        <td>@(Model.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Pasif mi ?</th>
+        <td>@(Model.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+
+</table>
+
+<a href="@Url.Action("Index", "WorkCenter")" class="btn btn-primary">Geri Dön</a>

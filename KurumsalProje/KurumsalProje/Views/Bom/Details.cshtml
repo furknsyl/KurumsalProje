@@ -1,0 +1,73 @@
+﻿@model KurumsalProje.ViewModels.BomViewModels.BomViewModel
+
+@{
+    ViewBag.Title = "Ürün Ağacı Detayları";
+}
+
+<h2>Ürün Ağacı Detayları</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Firma Kodu</th>
+        <td>@Model.COMCODE</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Tipi</th>
+        <td>@Model.BOMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Kodu</th>
+        <td>@Model.BOMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Başlangıç</th>
+        <td>@Model.BOMDOCFROM.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Bitiş</th>
+        <td>@Model.BOMDOCUNTIL.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Malzeme Tipi</th>
+        <td>@Model.MATDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Malzeme Kodu</th>
+        <td>@Model.MATDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Miktar</th>
+        <td>@Model.QUANTITY</td>
+    </tr>
+    <tr>
+        <th>Çizim Numarası</th>
+        <td>@Model.DRAWNUM</td>
+    </tr>
+    <tr>
+        <th>Bileşen Kodu</th>
+        <td>@Model.COMPONENT</td>
+    </tr>
+    <tr>
+        <th>İçerik Numarası</th>
+        <td>@Model.CONTENTNUM</td>
+    </tr>
+    <tr>
+        <th>Kalem Ürün Ağacı Tipi</th>
+        <td>@Model.COMPBOMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Kalem Ürün Ağacı Kodu</th>
+        <td>@Model.COMPBOMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Silindi mi ?</th>
+        <td>@(Model.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Pasif mi ?</th>
+        <td>@(Model.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+
+</table>
+
+<a href="@Url.Action("Index", "Bom")" class="btn btn-primary">Geri Dön</a>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2fe15e5dbb64489989f16b7d82c00076" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCECCM001" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEGEN001" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEGEN002" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEGEN003" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEGEN004" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEGEN005" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEMAT001" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEOPR001" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEROT001" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEWCM001" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.sysdiagrams" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEBOM001" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEWCMHEAD" Width="1.5" PointX="3.375" PointY="16.25" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEWCMOPR" Width="1.5" PointX="5.625" PointY="15.125" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEWCMTEXT" Width="1.5" PointX="5.625" PointY="17.625" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCECCMHEAD" Width="1.5" PointX="13.375" PointY="7" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCECCMTEXT" Width="1.5" PointX="15.625" PointY="7.125" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEBOMCONTENT" Width="1.5" PointX="10.625" PointY="16" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEBOMHEAD" Width="1.5" PointX="8.375" PointY="16.125" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEROTBOMCONTENT" Width="1.5" PointX="17.625" PointY="11.25" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEROTHEAD" Width="1.5" PointX="15.375" PointY="13.625" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEROTOPRCONTENT" Width="1.5" PointX="17.625" PointY="15.75" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEMATHEAD" Width="1.5" PointX="15.375" PointY="1.125" />
+        <EntityTypeShape EntityType="KKPBCEModel.BSMGRBCEMATTEXT" Width="1.5" PointX="17.625" PointY="2.125" />
+        <AssociationConnector Association="KKPBCEModel.FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

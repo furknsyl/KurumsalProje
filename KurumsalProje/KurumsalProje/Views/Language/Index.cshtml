@@ -1,0 +1,35 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCEGEN002>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dil Bilgileri</h2>
+<br />
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Dil Kod</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.LANCODE</td>
+            <td>@item.LANTEXT</td>
+            <td><a href="/Language/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Language/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+
+    }
+</table>
+
+<a href="/Language/YeniKayıt" class="btn btn-primary">Yeni Dil Ekle</a>

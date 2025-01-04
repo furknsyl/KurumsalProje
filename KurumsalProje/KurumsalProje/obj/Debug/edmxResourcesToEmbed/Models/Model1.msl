@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KKPBCEModelStoreContainer" CdmEntityContainer="KKPBCEEntities">
+    <EntitySetMapping Name="BSMGRBCECCM001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCECCM001">
+        <MappingFragment StoreEntitySet="BSMGRBCECCM001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEGEN001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEGEN001">
+        <MappingFragment StoreEntitySet="BSMGRBCEGEN001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="COMTEXT" ColumnName="COMTEXT" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="CITYCODE" ColumnName="CITYCODE" />
+          <ScalarProperty Name="COUNTRYCODE" ColumnName="COUNTRYCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEGEN002">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEGEN002">
+        <MappingFragment StoreEntitySet="BSMGRBCEGEN002">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="LANCODE" ColumnName="LANCODE" />
+          <ScalarProperty Name="LANTEXT" ColumnName="LANTEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEGEN003">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEGEN003">
+        <MappingFragment StoreEntitySet="BSMGRBCEGEN003">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="COUNTRYCODE" ColumnName="COUNTRYCODE" />
+          <ScalarProperty Name="COUNTRYTEXT" ColumnName="COUNTRYTEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEGEN004">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEGEN004">
+        <MappingFragment StoreEntitySet="BSMGRBCEGEN004">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="CITYCODE" ColumnName="CITYCODE" />
+          <ScalarProperty Name="CITYTEXT" ColumnName="CITYTEXT" />
+          <ScalarProperty Name="COUNTRYCODE" ColumnName="COUNTRYCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEGEN005">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEGEN005">
+        <MappingFragment StoreEntitySet="BSMGRBCEGEN005">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="UNITCODE" ColumnName="UNITCODE" />
+          <ScalarProperty Name="UNITTEXT" ColumnName="UNITTEXT" />
+          <ScalarProperty Name="ISMAINUNIT" ColumnName="ISMAINUNIT" />
+          <ScalarProperty Name="MAINUNITCODE" ColumnName="MAINUNITCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEMAT001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEMAT001">
+        <MappingFragment StoreEntitySet="BSMGRBCEMAT001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEOPR001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEOPR001">
+        <MappingFragment StoreEntitySet="BSMGRBCEOPR001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEROT001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEROT001">
+        <MappingFragment StoreEntitySet="BSMGRBCEROT001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEWCM001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEWCM001">
+        <MappingFragment StoreEntitySet="BSMGRBCEWCM001">
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="KKPBCEModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEBOM001">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEBOM001">
+        <MappingFragment StoreEntitySet="BSMGRBCEBOM001">
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="DOCTYPETEXT" ColumnName="DOCTYPETEXT" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEWCMHEAD">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEWCMHEAD">
+        <MappingFragment StoreEntitySet="BSMGRBCEWCMHEAD">
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="WORKTIME" ColumnName="WORKTIME" />
+          <ScalarProperty Name="CCMDOCNUM" ColumnName="CCMDOCNUM" />
+          <ScalarProperty Name="CCMDOCTYPE" ColumnName="CCMDOCTYPE" />
+          <ScalarProperty Name="MAINWCMDOCNUM" ColumnName="MAINWCMDOCNUM" />
+          <ScalarProperty Name="MAINWCMDOCTYPE" ColumnName="MAINWCMDOCTYPE" />
+          <ScalarProperty Name="WCMDOCUNTIL" ColumnName="WCMDOCUNTIL" />
+          <ScalarProperty Name="WCMDOCFROM" ColumnName="WCMDOCFROM" />
+          <ScalarProperty Name="WCMDOCNUM" ColumnName="WCMDOCNUM" />
+          <ScalarProperty Name="WCMDOCTYPE" ColumnName="WCMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEWCMOPR">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEWCMOPR">
+        <MappingFragment StoreEntitySet="BSMGRBCEWCMOPR">
+          <ScalarProperty Name="OPRDOCTYPE" ColumnName="OPRDOCTYPE" />
+          <ScalarProperty Name="WCMDOCUNTIL" ColumnName="WCMDOCUNTIL" />
+          <ScalarProperty Name="WCMDOCFROM" ColumnName="WCMDOCFROM" />
+          <ScalarProperty Name="WCMDOCNUM" ColumnName="WCMDOCNUM" />
+          <ScalarProperty Name="WCMDOCTYPE" ColumnName="WCMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEWCMTEXT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEWCMTEXT">
+        <MappingFragment StoreEntitySet="BSMGRBCEWCMTEXT">
+          <ScalarProperty Name="WCMLTEXT" ColumnName="WCMLTEXT" />
+          <ScalarProperty Name="WCMSTEXT" ColumnName="WCMSTEXT" />
+          <ScalarProperty Name="LANCODE" ColumnName="LANCODE" />
+          <ScalarProperty Name="WCMDOCUNTIL" ColumnName="WCMDOCUNTIL" />
+          <ScalarProperty Name="WCMDOCFROM" ColumnName="WCMDOCFROM" />
+          <ScalarProperty Name="WCMDOCNUM" ColumnName="WCMDOCNUM" />
+          <ScalarProperty Name="WCMDOCTYPE" ColumnName="WCMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCECCMHEAD">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCECCMHEAD">
+        <MappingFragment StoreEntitySet="BSMGRBCECCMHEAD">
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="MAINCCMDOCNUM" ColumnName="MAINCCMDOCNUM" />
+          <ScalarProperty Name="MAINCCMDOCTYPE" ColumnName="MAINCCMDOCTYPE" />
+          <ScalarProperty Name="CCMDOCUNTIL" ColumnName="CCMDOCUNTIL" />
+          <ScalarProperty Name="CCMDOCFROM" ColumnName="CCMDOCFROM" />
+          <ScalarProperty Name="CCMDOCNUM" ColumnName="CCMDOCNUM" />
+          <ScalarProperty Name="CCMDOCTYPE" ColumnName="CCMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCECCMTEXT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCECCMTEXT">
+        <MappingFragment StoreEntitySet="BSMGRBCECCMTEXT">
+          <ScalarProperty Name="CCMLTEXT" ColumnName="CCMLTEXT" />
+          <ScalarProperty Name="CCMSTEXT" ColumnName="CCMSTEXT" />
+          <ScalarProperty Name="LANCODE" ColumnName="LANCODE" />
+          <ScalarProperty Name="CCMDOCUNTIL" ColumnName="CCMDOCUNTIL" />
+          <ScalarProperty Name="CCMDOCFROM" ColumnName="CCMDOCFROM" />
+          <ScalarProperty Name="CCMDOCNUM" ColumnName="CCMDOCNUM" />
+          <ScalarProperty Name="CCMDOCTYPE" ColumnName="CCMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEBOMCONTENT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEBOMCONTENT">
+        <MappingFragment StoreEntitySet="BSMGRBCEBOMCONTENT">
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="COMPBOMDOCNUM" ColumnName="COMPBOMDOCNUM" />
+          <ScalarProperty Name="COMPBOMDOCTYPE" ColumnName="COMPBOMDOCTYPE" />
+          <ScalarProperty Name="COMPONENT" ColumnName="COMPONENT" />
+          <ScalarProperty Name="CONTENTNUM" ColumnName="CONTENTNUM" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="BOMDOCUNTIL" ColumnName="BOMDOCUNTIL" />
+          <ScalarProperty Name="BOMDOCFROM" ColumnName="BOMDOCFROM" />
+          <ScalarProperty Name="BOMDOCNUM" ColumnName="BOMDOCNUM" />
+          <ScalarProperty Name="BOMDOCTYPE" ColumnName="BOMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEBOMHEAD">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEBOMHEAD">
+        <MappingFragment StoreEntitySet="BSMGRBCEBOMHEAD">
+          <ScalarProperty Name="DRAWNUM" ColumnName="DRAWNUM" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="BOMDOCUNTIL" ColumnName="BOMDOCUNTIL" />
+          <ScalarProperty Name="BOMDOCFROM" ColumnName="BOMDOCFROM" />
+          <ScalarProperty Name="BOMDOCNUM" ColumnName="BOMDOCNUM" />
+          <ScalarProperty Name="BOMDOCTYPE" ColumnName="BOMDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEROTBOMCONTENT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEROTBOMCONTENT">
+        <MappingFragment StoreEntitySet="BSMGRBCEROTBOMCONTENT">
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="COMPONENT" ColumnName="COMPONENT" />
+          <ScalarProperty Name="CONTENTNUM" ColumnName="CONTENTNUM" />
+          <ScalarProperty Name="BOMDOCNUM" ColumnName="BOMDOCNUM" />
+          <ScalarProperty Name="BOMDOCTYPE" ColumnName="BOMDOCTYPE" />
+          <ScalarProperty Name="OPRNUM" ColumnName="OPRNUM" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="ROTDOCUNTIL" ColumnName="ROTDOCUNTIL" />
+          <ScalarProperty Name="ROTDOCFROM" ColumnName="ROTDOCFROM" />
+          <ScalarProperty Name="ROTDOCNUM" ColumnName="ROTDOCNUM" />
+          <ScalarProperty Name="ROTDOCTYPE" ColumnName="ROTDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEROTHEAD">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEROTHEAD">
+        <MappingFragment StoreEntitySet="BSMGRBCEROTHEAD">
+          <ScalarProperty Name="DRAWNUM" ColumnName="DRAWNUM" />
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="ROTDOCUNTIL" ColumnName="ROTDOCUNTIL" />
+          <ScalarProperty Name="ROTDOCFROM" ColumnName="ROTDOCFROM" />
+          <ScalarProperty Name="ROTDOCNUM" ColumnName="ROTDOCNUM" />
+          <ScalarProperty Name="ROTDOCTYPE" ColumnName="ROTDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEROTOPRCONTENT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEROTOPRCONTENT">
+        <MappingFragment StoreEntitySet="BSMGRBCEROTOPRCONTENT">
+          <ScalarProperty Name="LABOURTIME" ColumnName="LABOURTIME" />
+          <ScalarProperty Name="MACHINETIME" ColumnName="MACHINETIME" />
+          <ScalarProperty Name="SETUPTIME" ColumnName="SETUPTIME" />
+          <ScalarProperty Name="OPRDOCTYPE" ColumnName="OPRDOCTYPE" />
+          <ScalarProperty Name="WCMDOCNUM" ColumnName="WCMDOCNUM" />
+          <ScalarProperty Name="WCMDOCTYPE" ColumnName="WCMDOCTYPE" />
+          <ScalarProperty Name="OPRNUM" ColumnName="OPRNUM" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="ROTDOCUNTIL" ColumnName="ROTDOCUNTIL" />
+          <ScalarProperty Name="ROTDOCFROM" ColumnName="ROTDOCFROM" />
+          <ScalarProperty Name="ROTDOCNUM" ColumnName="ROTDOCNUM" />
+          <ScalarProperty Name="ROTDOCTYPE" ColumnName="ROTDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEMATHEAD">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEMATHEAD">
+        <MappingFragment StoreEntitySet="BSMGRBCEMATHEAD">
+          <ScalarProperty Name="ISPASSIVE" ColumnName="ISPASSIVE" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="ROTDOCNUM" ColumnName="ROTDOCNUM" />
+          <ScalarProperty Name="ROTDOCTYPE" ColumnName="ROTDOCTYPE" />
+          <ScalarProperty Name="ISROUTE" ColumnName="ISROUTE" />
+          <ScalarProperty Name="BOMDOCNUM" ColumnName="BOMDOCNUM" />
+          <ScalarProperty Name="BOMDOCTYPE" ColumnName="BOMDOCTYPE" />
+          <ScalarProperty Name="ISBOM" ColumnName="ISBOM" />
+          <ScalarProperty Name="BWUNIT" ColumnName="BWUNIT" />
+          <ScalarProperty Name="BRUTWEIGHT" ColumnName="BRUTWEIGHT" />
+          <ScalarProperty Name="NWUNIT" ColumnName="NWUNIT" />
+          <ScalarProperty Name="NETWEIGHT" ColumnName="NETWEIGHT" />
+          <ScalarProperty Name="STUNIT" ColumnName="STUNIT" />
+          <ScalarProperty Name="SUPPLYTYPE" ColumnName="SUPPLYTYPE" />
+          <ScalarProperty Name="MATDOCUNTIL" ColumnName="MATDOCUNTIL" />
+          <ScalarProperty Name="MATDOCFROM" ColumnName="MATDOCFROM" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BSMGRBCEMATTEXT">
+      <EntityTypeMapping TypeName="KKPBCEModel.BSMGRBCEMATTEXT">
+        <MappingFragment StoreEntitySet="BSMGRBCEMATTEXT">
+          <ScalarProperty Name="MATLTEXT" ColumnName="MATLTEXT" />
+          <ScalarProperty Name="MATSTEXT" ColumnName="MATSTEXT" />
+          <ScalarProperty Name="LANCODE" ColumnName="LANCODE" />
+          <ScalarProperty Name="MATDOCUNTIL" ColumnName="MATDOCUNTIL" />
+          <ScalarProperty Name="MATDOCFROM" ColumnName="MATDOCFROM" />
+          <ScalarProperty Name="MATDOCNUM" ColumnName="MATDOCNUM" />
+          <ScalarProperty Name="MATDOCTYPE" ColumnName="MATDOCTYPE" />
+          <ScalarProperty Name="COMCODE" ColumnName="COMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

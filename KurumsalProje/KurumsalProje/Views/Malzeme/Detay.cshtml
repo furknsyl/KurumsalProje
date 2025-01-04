@@ -1,0 +1,104 @@
+﻿@model KurumsalProje.ViewModels.MaterialViewModels.MalzemeKayitViewModel
+
+@{
+    ViewBag.Title = "Malzeme Detayları";
+}
+
+<h2>Malzeme Detayları</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Firma Kodu</th>
+        <td>@Model.COMCODE</td>
+    </tr>
+    <tr>
+        <th>Malzeme Tipi</th>
+        <td>@Model.MATDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Malzeme Kodu</th>
+        <td>@Model.MATDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Başlangıç</th>
+        <td>@Model.MATDOCFROM.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Geçerlilik Bitiş</th>
+        <td>@Model.MATDOCUNTIL.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Tedarik Tipi</th>
+        <td>@(Model.SUPPLYTYPE == 1 ? "Üretilen" : "Satın Alınan")</td>
+    </tr>
+    <tr>
+        <th>Stok Birimi</th>
+        <td>@Model.STUNIT</td>
+    </tr>
+    <tr>
+        <th>Net Ağırlık</th>
+        <td>@Model.NETWEIGHT</td>
+    </tr>
+    <tr>
+        <th>Net Ağırlık Birimi</th>
+        <td>@Model.NWUNIT</td>
+    </tr>
+    <tr>
+        <th>Brüt Ağırlık</th>
+        <td>@Model.BRUTWEIGHT</td>
+    </tr>
+    <tr>
+        <th>Brüt Ağırlık Birimi</th>
+        <td>@Model.BWUNIT</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Var mı ?</th>
+        <td>
+            @(Model.ISBOM == 0 ? "Hayır" : Model.ISBOM == 1 ? "Evet" : "Olmayacak")
+        </td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Tipi</th>
+        <td>@Model.BOMDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Ürün Ağacı Kodu</th>
+        <td>@Model.BOMDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Rota Var mı ?</th>
+        <td>
+            @(Model.ISROUTE == 0 ? "Hayır" : Model.ISROUTE == 1 ? "Evet" : "Olmayacak")
+        </td>
+    </tr>
+    <tr>
+        <th>Rota Tipi</th>
+        <td>@Model.ROTDOCTYPE</td>
+    </tr>
+    <tr>
+        <th>Rota Numarası</th>
+        <td>@Model.ROTDOCNUM</td>
+    </tr>
+    <tr>
+        <th>Silindi mi ?</th>
+        <td>@(Model.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Pasif mi ?</th>
+        <td>@(Model.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Dil Kodu</th>
+        <td>@Model.LANCODE</td>
+    </tr>
+    <tr>
+        <th>Kısa Açıklama</th>
+        <td>@Model.MATSTEXT</td>
+    </tr>
+    <tr>
+        <th>Uzun Açıklama</th>
+        <td>@Model.MATLTEXT</td>
+    </tr>
+</table>
+
+<a href="@Url.Action("Index", "Malzeme")" class="btn btn-primary">Geri Dön</a>

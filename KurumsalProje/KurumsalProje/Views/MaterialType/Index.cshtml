@@ -1,0 +1,36 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCEMAT001>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Materyal Bilgileri</h2>
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Malzeme Tipi</th>
+        <th>Malzeme Tipi Açıklaması</th>
+        <th>Pasif mi ?</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.DOCTYPE</td>
+            <td>@item.DOCTYPETEXT</td>
+            <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+            <td><a href="/MaterialType/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/MaterialType/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+
+    }
+</table>
+
+<a href="/MaterialType/YeniKayıt" class="btn btn-primary">Yeni Materyal Tipi Ekle</a>

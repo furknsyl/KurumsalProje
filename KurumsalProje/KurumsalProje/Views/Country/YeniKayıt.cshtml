@@ -1,0 +1,30 @@
+﻿@model  KurumsalProje.Models.BSMGRBCEGEN003
+
+@{
+    ViewBag.Title = "YeniKayıt";
+
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="COMCODE">Firma Kod</label>
+        <!-- COMCODE için DropDownList -->
+        <select id="COMCODE" name="COMCODE" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.COMCODEList as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <br />
+    <label>Ülke Kodu</label>
+    @Html.TextBoxFor(x => x.COUNTRYCODE, new { @class = "form-control", maxlength = "3" })
+    <br />
+    <label>Ülke Adı</label>
+    @Html.TextBoxFor(x => x.COUNTRYTEXT, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

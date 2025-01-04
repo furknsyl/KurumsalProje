@@ -1,0 +1,30 @@
+﻿<form action="/Default/KayıtGuncelle" method="post">
+    <input type="hidden" name="COMCODE" value="@Model.COMCODE" />
+
+    <div class="form-group">
+        <label>Adı</label>
+        <input type="text" name="COMTEXT" value="@Model.COMTEXT" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Adres 1</label>
+        <input type="text" name="ADDRESS1" value="@Model.ADDRESS1" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Adres 2</label>
+        <input type="text" name="ADDRESS2" value="@Model.ADDRESS2" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Şehir Kodu</label>
+        <input type="number" name="CITYCODE" value="@Model.CITYCODE" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Ülke Kodu</label>
+        <input type="text" name="COUNTRYCODE" value="@Model.COUNTRYCODE" class="form-control" required maxlength="2" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

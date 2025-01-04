@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KKPBCEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BSMGRBCECCM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COMTEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDRESS1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="CITYCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN002">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LANCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LANTEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN003">
+    <Key>
+      <PropertyRef Name="COUNTRYCODE" />
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COUNTRYTEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN004">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITYCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITYTEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN005">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UNITCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UNITTEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ISMAINUNIT" Type="Int32" />
+    <Property Name="MAINUNITCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEMAT001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEOPR001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROT001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="KKPBCEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BSMGRBCECCM001" EntityType="Self.BSMGRBCECCM001" />
+    <EntitySet Name="BSMGRBCEGEN001" EntityType="Self.BSMGRBCEGEN001" />
+    <EntitySet Name="BSMGRBCEGEN002" EntityType="Self.BSMGRBCEGEN002" />
+    <EntitySet Name="BSMGRBCEGEN003" EntityType="Self.BSMGRBCEGEN003" />
+    <EntitySet Name="BSMGRBCEGEN004" EntityType="Self.BSMGRBCEGEN004" />
+    <EntitySet Name="BSMGRBCEGEN005" EntityType="Self.BSMGRBCEGEN005" />
+    <EntitySet Name="BSMGRBCEMAT001" EntityType="Self.BSMGRBCEMAT001" />
+    <EntitySet Name="BSMGRBCEOPR001" EntityType="Self.BSMGRBCEOPR001" />
+    <EntitySet Name="BSMGRBCEROT001" EntityType="Self.BSMGRBCEROT001" />
+    <EntitySet Name="BSMGRBCEWCM001" EntityType="Self.BSMGRBCEWCM001" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="BSMGRBCEBOM001" EntityType="KKPBCEModel.BSMGRBCEBOM001" />
+    <EntitySet Name="BSMGRBCEWCMHEAD" EntityType="KKPBCEModel.BSMGRBCEWCMHEAD" />
+    <EntitySet Name="BSMGRBCEWCMOPR" EntityType="KKPBCEModel.BSMGRBCEWCMOPR" />
+    <EntitySet Name="BSMGRBCEWCMTEXT" EntityType="KKPBCEModel.BSMGRBCEWCMTEXT" />
+    <AssociationSet Name="FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD" Association="KKPBCEModel.FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD">
+      <End Role="BSMGRBCEWCMHEAD" EntitySet="BSMGRBCEWCMHEAD" />
+      <End Role="BSMGRBCEWCMOPR" EntitySet="BSMGRBCEWCMOPR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD" Association="KKPBCEModel.FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD">
+      <End Role="BSMGRBCEWCMHEAD" EntitySet="BSMGRBCEWCMHEAD" />
+      <End Role="BSMGRBCEWCMTEXT" EntitySet="BSMGRBCEWCMTEXT" />
+    </AssociationSet>
+    <EntitySet Name="BSMGRBCECCMHEAD" EntityType="KKPBCEModel.BSMGRBCECCMHEAD" />
+    <EntitySet Name="BSMGRBCECCMTEXT" EntityType="KKPBCEModel.BSMGRBCECCMTEXT" />
+    <AssociationSet Name="FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD" Association="KKPBCEModel.FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD">
+      <End Role="BSMGRBCECCMHEAD" EntitySet="BSMGRBCECCMHEAD" />
+      <End Role="BSMGRBCECCMTEXT" EntitySet="BSMGRBCECCMTEXT" />
+    </AssociationSet>
+    <EntitySet Name="BSMGRBCEBOMCONTENT" EntityType="KKPBCEModel.BSMGRBCEBOMCONTENT" />
+    <EntitySet Name="BSMGRBCEBOMHEAD" EntityType="KKPBCEModel.BSMGRBCEBOMHEAD" />
+    <AssociationSet Name="FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD" Association="KKPBCEModel.FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD">
+      <End Role="BSMGRBCEBOMHEAD" EntitySet="BSMGRBCEBOMHEAD" />
+      <End Role="BSMGRBCEBOMCONTENT" EntitySet="BSMGRBCEBOMCONTENT" />
+    </AssociationSet>
+    <EntitySet Name="BSMGRBCEROTBOMCONTENT" EntityType="KKPBCEModel.BSMGRBCEROTBOMCONTENT" />
+    <EntitySet Name="BSMGRBCEROTHEAD" EntityType="KKPBCEModel.BSMGRBCEROTHEAD" />
+    <EntitySet Name="BSMGRBCEROTOPRCONTENT" EntityType="KKPBCEModel.BSMGRBCEROTOPRCONTENT" />
+    <AssociationSet Name="FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD" Association="KKPBCEModel.FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD">
+      <End Role="BSMGRBCEROTHEAD" EntitySet="BSMGRBCEROTHEAD" />
+      <End Role="BSMGRBCEROTBOMCONTENT" EntitySet="BSMGRBCEROTBOMCONTENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD" Association="KKPBCEModel.FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD">
+      <End Role="BSMGRBCEROTHEAD" EntitySet="BSMGRBCEROTHEAD" />
+      <End Role="BSMGRBCEROTOPRCONTENT" EntitySet="BSMGRBCEROTOPRCONTENT" />
+    </AssociationSet>
+    <EntitySet Name="BSMGRBCEMATHEAD" EntityType="KKPBCEModel.BSMGRBCEMATHEAD" />
+    <EntitySet Name="BSMGRBCEMATTEXT" EntityType="KKPBCEModel.BSMGRBCEMATTEXT" />
+    <AssociationSet Name="FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD" Association="KKPBCEModel.FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD">
+      <End Role="BSMGRBCEMATHEAD" EntitySet="BSMGRBCEMATHEAD" />
+      <End Role="BSMGRBCEMATTEXT" EntitySet="BSMGRBCEMATTEXT" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BSMGRBCEBOM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DOCTYPETEXT" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="WCMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MAINWCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MAINWCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WORKTIME" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+    <NavigationProperty Name="BSMGRBCEWCMOPR" Relationship="KKPBCEModel.FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD" FromRole="BSMGRBCEWCMHEAD" ToRole="BSMGRBCEWCMOPR" />
+    <NavigationProperty Name="BSMGRBCEWCMTEXT" Relationship="KKPBCEModel.FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD" FromRole="BSMGRBCEWCMHEAD" ToRole="BSMGRBCEWCMTEXT" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMOPR">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="WCMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="OPRDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCEWCMHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD" FromRole="BSMGRBCEWCMOPR" ToRole="BSMGRBCEWCMHEAD" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="WCMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LANCODE" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WCMSTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WCMLTEXT" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCEWCMHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD" FromRole="BSMGRBCEWCMTEXT" ToRole="BSMGRBCEWCMHEAD" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEWCMHEAD" Role="BSMGRBCEWCMHEAD" Multiplicity="1" />
+    <End Type="KKPBCEModel.BSMGRBCEWCMOPR" Role="BSMGRBCEWCMOPR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEWCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEWCMOPR">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEWCMHEAD" Role="BSMGRBCEWCMHEAD" Multiplicity="1" />
+    <End Type="KKPBCEModel.BSMGRBCEWCMTEXT" Role="BSMGRBCEWCMTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEWCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEWCMTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BSMGRBCECCMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="CCMDOCTYPE" />
+      <PropertyRef Name="CCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CCMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MAINCCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MAINCCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+    <NavigationProperty Name="BSMGRBCECCMTEXT" Relationship="KKPBCEModel.FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD" FromRole="BSMGRBCECCMHEAD" ToRole="BSMGRBCECCMTEXT" />
+  </EntityType>
+  <EntityType Name="BSMGRBCECCMTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="CCMDOCTYPE" />
+      <PropertyRef Name="CCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CCMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CCMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LANCODE" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CCMSTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CCMLTEXT" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCECCMHEAD" Relationship="KKPBCEModel.FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD" FromRole="BSMGRBCECCMTEXT" ToRole="BSMGRBCECCMHEAD" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD">
+    <End Type="KKPBCEModel.BSMGRBCECCMHEAD" Role="BSMGRBCECCMHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="KKPBCEModel.BSMGRBCECCMTEXT" Role="BSMGRBCECCMTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCECCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="CCMDOCTYPE" />
+        <PropertyRef Name="CCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCECCMTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="CCMDOCTYPE" />
+        <PropertyRef Name="CCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BSMGRBCEBOMCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="BOMDOCTYPE" />
+      <PropertyRef Name="BOMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BOMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENTNUM" Type="Int32" Nullable="false" />
+    <Property Name="COMPONENT" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="COMPBOMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="COMPBOMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QUANTITY" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <NavigationProperty Name="BSMGRBCEBOMHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD" FromRole="BSMGRBCEBOMCONTENT" ToRole="BSMGRBCEBOMHEAD" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEBOMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="BOMDOCTYPE" />
+      <PropertyRef Name="BOMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BOMDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QUANTITY" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+    <Property Name="DRAWNUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCEBOMCONTENT" Relationship="KKPBCEModel.FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD" FromRole="BSMGRBCEBOMHEAD" ToRole="BSMGRBCEBOMCONTENT" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEBOMHEAD" Role="BSMGRBCEBOMHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="KKPBCEModel.BSMGRBCEBOMCONTENT" Role="BSMGRBCEBOMCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEBOMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="BOMDOCTYPE" />
+        <PropertyRef Name="BOMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEBOMCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="BOMDOCTYPE" />
+        <PropertyRef Name="BOMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BSMGRBCEROTBOMCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ROTDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="OPRNUM" Type="Int32" Nullable="false" />
+    <Property Name="BOMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENTNUM" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="COMPONENT" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QUANTITY" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <NavigationProperty Name="BSMGRBCEROTHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD" FromRole="BSMGRBCEROTBOMCONTENT" ToRole="BSMGRBCEROTHEAD" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROTHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ROTDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QUANTITY" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+    <Property Name="DRAWNUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCEROTBOMCONTENT" Relationship="KKPBCEModel.FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD" FromRole="BSMGRBCEROTHEAD" ToRole="BSMGRBCEROTBOMCONTENT" />
+    <NavigationProperty Name="BSMGRBCEROTOPRCONTENT" Relationship="KKPBCEModel.FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD" FromRole="BSMGRBCEROTHEAD" ToRole="BSMGRBCEROTOPRCONTENT" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROTOPRCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ROTDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="OPRNUM" Type="Int32" Nullable="false" />
+    <Property Name="WCMDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WCMDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="OPRDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SETUPTIME" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="MACHINETIME" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="LABOURTIME" Type="Decimal" Precision="3" Scale="2" />
+    <NavigationProperty Name="BSMGRBCEROTHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD" FromRole="BSMGRBCEROTOPRCONTENT" ToRole="BSMGRBCEROTHEAD" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEROTHEAD" Role="BSMGRBCEROTHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="KKPBCEModel.BSMGRBCEROTBOMCONTENT" Role="BSMGRBCEROTBOMCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEROTHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEROTBOMCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEROTHEAD" Role="BSMGRBCEROTHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="KKPBCEModel.BSMGRBCEROTOPRCONTENT" Role="BSMGRBCEROTOPRCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEROTHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEROTOPRCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BSMGRBCEMATHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="MATDOCTYPE" />
+      <PropertyRef Name="MATDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SUPPLYTYPE" Type="Int32" Nullable="false" />
+    <Property Name="STUNIT" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NETWEIGHT" Type="Decimal" Precision="12" Scale="3" />
+    <Property Name="NWUNIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BRUTWEIGHT" Type="Decimal" Precision="12" Scale="3" />
+    <Property Name="BWUNIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ISBOM" Type="Int32" />
+    <Property Name="BOMDOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BOMDOCNUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ISROUTE" Type="Int32" />
+    <Property Name="ROTDOCTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ROTDOCNUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="ISPASSIVE" Type="Int32" />
+    <NavigationProperty Name="BSMGRBCEMATTEXT" Relationship="KKPBCEModel.FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD" FromRole="BSMGRBCEMATHEAD" ToRole="BSMGRBCEMATTEXT" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEMATTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="MATDOCTYPE" />
+      <PropertyRef Name="MATDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCTYPE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCNUM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MATDOCFROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATDOCUNTIL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LANCODE" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MATSTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MATLTEXT" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BSMGRBCEMATHEAD" Relationship="KKPBCEModel.FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD" FromRole="BSMGRBCEMATTEXT" ToRole="BSMGRBCEMATHEAD" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD">
+    <End Type="KKPBCEModel.BSMGRBCEMATHEAD" Role="BSMGRBCEMATHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="KKPBCEModel.BSMGRBCEMATTEXT" Role="BSMGRBCEMATTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEMATHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="MATDOCTYPE" />
+        <PropertyRef Name="MATDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEMATTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="MATDOCTYPE" />
+        <PropertyRef Name="MATDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

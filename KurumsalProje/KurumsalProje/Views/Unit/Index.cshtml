@@ -1,0 +1,35 @@
+﻿@using KurumsalProje.Models
+@model List<BSMGRBCEGEN005>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Birim Bilgileri</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Birim Kod</th>
+        <th>Birim Adı</th>
+        <th>Ana Ağırlık Birimi</th>
+        <th>Ana Birim Kodu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.COMCODE</td>
+            <td>@item.UNITCODE</td>
+            <td>@item.UNITTEXT</td>
+            <td>@(item.ISMAINUNIT == 1 ? "Evet" : "Hayır")</td>
+            <td>@item.MAINUNITCODE</td>
+            <td><a href="/Unit/KayıtSil/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Unit/KayıtGuncelle/@item.COMCODE" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+
+<a href="/Unit/YeniKayıt" class="btn btn-primary">Yeni Birim Ekle</a>

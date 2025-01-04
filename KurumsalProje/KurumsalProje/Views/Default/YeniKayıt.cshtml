@@ -1,0 +1,44 @@
+﻿@model  KurumsalProje.Models.BSMGRBCEGEN001
+
+@{
+    ViewBag.Title = "YeniKayıt";
+
+}
+
+<form method="post">
+    <h2>Yeni Kayıt Ekleme</h2>
+    <br />
+    <label>Şirket Kısaltması</label>
+    @Html.TextBoxFor(x => x.COMCODE, new { @class = "form-control", maxlength = "4" })
+    <br />
+    <label>Şirket Ad</label>
+    @Html.TextBoxFor(x => x.COMTEXT, new { @class = "form-control" })
+    <br />
+    <label>Adres-1</label>
+    @Html.TextBoxFor(x => x.ADDRESS1, new { @class = "form-control" })
+    <br />
+    <label>Adres-2</label>
+    @Html.TextBoxFor(x => x.ADDRESS2, new { @class = "form-control" })
+    <br />
+    <label>Şehir Kodu</label>
+    <select id="CITYCODE" name="CITYCODE" class="form-control">
+        <option value="">Seçiniz</option>
+        @foreach (var item in ViewBag.CITYList as List<SelectListItem>)
+        {
+            <option value="@item.Value">@item.Text</option>
+        }
+    </select>
+    <br />
+    <label for="COUNTRYCODE">Ülke Kodu</label>
+    <!-- COMCODE için DropDownList -->
+    <select id="COUNTRYCODE" name="COUNTRYCODE" class="form-control">
+        <option value="">Seçiniz</option>
+        @foreach (var item in ViewBag.COUNTRYList as List<SelectListItem>)
+        {
+            <option value="@item.Value">@item.Text</option>
+        }
+    </select>
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

@@ -1,0 +1,160 @@
+﻿@model KurumsalProje.ViewModels.WorkCenterViewModels.WorkCenterViewModel
+
+<h2>Yeni İş Merkezi Ekle</h2>
+<br />
+<form asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="COMCODE">Firma Kod</label>
+                <select id="COMCODE" name="COMCODE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.COMCODEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WCMDOCTYPE">İş Merkezi Tipi</label>
+                <select id="WCMDOCTYPE" name="WCMDOCTYPE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.WCMDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WCMDOCNUM">İş Merkezi Kodu</label>
+                <input type="text" id="WCMDOCNUM" name="WCMDOCNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WCMDOCFROM">Geçerlilik Başlangıç</label>
+                <input type="date" id="WCMDOCFROM" name="WCMDOCFROM" class="form-control" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WCMDOCUNTIL">Geçerlilik Bitiş</label>
+                <input type="date" id="WCMDOCUNTIL" name="WCMDOCUNTIL" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAINWCMDOCTYPE">Ana İş Merkezi Tipi</label>
+                <input type="text" id="MAINWCMDOCTYPE" name="MAINWCMDOCTYPE" class="form-control" maxlength="4" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAINWCMDOCNUM">Ana İş Merkezi Kodu</label>
+                <input type="text" id="MAINWCMDOCNUM" name="MAINWCMDOCNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="CCMDOCTYPE">Maliyet Merkezi Tipi</label>
+                <select id="CCMDOCTYPE" name="CCMDOCTYPE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.CCMDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="CCMDOCNUM">Maliyet Merkezi Kodu</label>
+                <input type="text" id="CCMDOCNUM" name="CCMDOCNUM" class="form-control" required />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WORKTIME">Çalışma Süresi</label>
+                <input type="number" id="WORKTIME" name="WORKTIME" class="form-control" step="1" max="9.99" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISDELETED">Silindi mi?</label>
+                <select id="ISDELETED" name="ISDELETED" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    <option value="0">Hayır</option>
+                    <option value="1">Evet</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISPASSIVE">Pasif mi?</label>
+                <select id="ISPASSIVE" name="ISPASSIVE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    <option value="0">Hayır</option>
+                    <option value="1">Evet</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LANCODE">Dil</label>
+                <select id="LANCODE" name="LANCODE" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.LANCODEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WCMSTEXT">Kısa Açıklama</label>
+                <input type="text" id="WCMSTEXT" name="WCMSTEXT" class="form-control" required />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="WCMLTEXT">Uzun Açıklama</label>
+        <textarea id="WCMLTEXT" name="WCMLTEXT" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="OPRDOCTYPE">Operasyon Kodu</label>
+        <select id="OPRDOCTYPE" name="OPRDOCTYPE" class="form-control" required>
+            <option value="">Seçiniz</option>
+            @foreach (var item in ViewBag.OPRDOCTYPEList as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

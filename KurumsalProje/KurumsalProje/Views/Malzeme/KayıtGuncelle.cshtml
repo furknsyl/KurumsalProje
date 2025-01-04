@@ -1,0 +1,213 @@
+﻿@model KurumsalProje.ViewModels.MaterialViewModels.MalzemeKayitViewModel
+
+@{
+    ViewBag.Title = "Kayıt Güncelle";
+}
+
+<h2>Malzeme Bilgileri Güncelle</h2>
+<br />
+<form asp-action="KayıtGuncelle" method="post">
+    <input type="hidden" id="COMCODE" name="COMCODE" value="@Model.COMCODE" />
+    <input type="hidden" id="MATDOCTYPE" name="MATDOCTYPE" value="@Model.MATDOCTYPE" />
+    <input type="hidden" id="MATDOCNUM" name="MATDOCNUM" value="@Model.MATDOCNUM" />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MATDOCFROM">Geçerlilik Başlangıç</label>
+                <input type="date" id="MATDOCFROM" name="MATDOCFROM" class="form-control" value="@Model.MATDOCFROM.ToString("yyyy-MM-dd")" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MATDOCUNTIL">Geçerlilik Bitiş</label>
+                <input type="date" id="MATDOCUNTIL" name="MATDOCUNTIL" class="form-control" value="@Model.MATDOCUNTIL.ToString("yyyy-MM-dd")" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SUPPLYTYPE">Tedarik Tipi</label>
+                <select id="SUPPLYTYPE" name="SUPPLYTYPE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="0" @(Model.SUPPLYTYPE == 0 ? "selected" : "")>Satın Alınan</option>
+                    <option value="1" @(Model.SUPPLYTYPE == 1 ? "selected" : "")>Üretilen</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="STUNIT">Malzeme Stok Birimi</label>
+                <select id="STUNIT" name="STUNIT" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.STUNITList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.STUNIT ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="NETWEIGHT">Net Ağırlık</label>
+                <input type="number" id="NETWEIGHT" name="NETWEIGHT" class="form-control" value="@string.Format("{0:0.###}", Model.NETWEIGHT)" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="NWUNIT">Net Ağırlık Birimi</label>
+                <select id="NWUNIT" name="NWUNIT" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.STUNITList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.NWUNIT ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BRUTWEIGHT">Brüt Ağırlık</label>
+                <input type="number" id="BRUTWEIGHT" name="BRUTWEIGHT" class="form-control" value="@string.Format("{0:0.###}", Model.BRUTWEIGHT)" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BWUNIT">Brüt Ağırlık Birimi</label>
+                <select id="BWUNIT" name="BWUNIT" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.STUNITList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.BWUNIT ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISBOM">Ürün Ağacı Var Mı?</label>
+                <select id="ISBOM" name="ISBOM" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="0" @(Model.ISBOM == 0 ? "selected" : "")>Hayır</option>
+                    <option value="1" @(Model.ISBOM == 1 ? "selected" : "")>Evet</option>
+                    <option value="2" @(Model.ISBOM == 2 ? "selected" : "")>Olmayacak</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCTYPE">Ürün Ağacı Tipi</label>
+                <select id="BOMDOCTYPE" name="BOMDOCTYPE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.BOMDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.BOMDOCTYPE ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="BOMDOCNUM">Ürün Ağacı Kodu</label>
+                <input type="text" id="BOMDOCNUM" name="BOMDOCNUM" class="form-control" value="@Model.BOMDOCNUM" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISROUTE">Rota Var Mı?</label>
+                <select id="ISROUTE" name="ISROUTE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="0" @(Model.ISROUTE == 0 ? "selected" : "")>Hayır</option>
+                    <option value="1" @(Model.ISROUTE == 1 ? "selected" : "")>Evet</option>
+                    <option value="2" @(Model.ISROUTE == 2 ? "selected" : "")>Olmayacak</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ROTDOCTYPE">Rota Tipi</label>
+                <select id="ROTDOCTYPE" name="ROTDOCTYPE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.ROTDOCTYPEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.ROTDOCTYPE ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ROTDOCNUM">Rota Numarası</label>
+                <input type="text" id="ROTDOCNUM" name="ROTDOCNUM" class="form-control" value="@Model.ROTDOCNUM" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISDELETED">Silindi mi?</label>
+                <select id="ISDELETED" name="ISDELETED" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="0" @(Model.ISDELETED == 0 ? "selected" : "")>Hayır</option>
+                    <option value="1" @(Model.ISDELETED == 1 ? "selected" : "")>Evet</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ISPASSIVE">Pasif mi?</label>
+                <select id="ISPASSIVE" name="ISPASSIVE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="0" @(Model.ISPASSIVE == 0 ? "selected" : "")>Hayır</option>
+                    <option value="1" @(Model.ISPASSIVE == 1 ? "selected" : "")>Evet</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LANCODE">Dil</label>
+                <select id="LANCODE" name="LANCODE" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in ViewBag.LANCODEList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.LANCODE ? "selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MATSTEXT">Kısa Açıklama</label>
+                <input type="text" id="MATSTEXT" name="MATSTEXT" class="form-control" value="@Model.MATSTEXT" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="MATLTEXT">Uzun Açıklama</label>
+        <textarea id="MATLTEXT" name="MATLTEXT" class="form-control">@Model.MATLTEXT</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>

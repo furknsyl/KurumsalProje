@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KKPBCEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BSMGRBCEBOM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEBOMCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="BOMDOCTYPE" />
+      <PropertyRef Name="BOMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BOMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BOMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="BOMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="BOMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CONTENTNUM" Type="int" Nullable="false" />
+    <Property Name="COMPONENT" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="COMPBOMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="COMPBOMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="QUANTITY" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEBOMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="BOMDOCTYPE" />
+      <PropertyRef Name="BOMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BOMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BOMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="BOMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="BOMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="QUANTITY" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="ISDELETED" Type="int" />
+    <Property Name="ISPASSIVE" Type="int" />
+    <Property Name="DRAWNUM" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="BSMGRBCECCM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCECCMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="CCMDOCTYPE" />
+      <PropertyRef Name="CCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CCMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="CCMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MAINCCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MAINCCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ISDELETED" Type="int" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCECCMTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="CCMDOCTYPE" />
+      <PropertyRef Name="CCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CCMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="CCMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="LANCODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="CCMSTEXT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CCMLTEXT" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="COMTEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ADDRESS1" Type="varchar" MaxLength="80" />
+    <Property Name="ADDRESS2" Type="varchar" MaxLength="80" />
+    <Property Name="CITYCODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN002">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="LANCODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LANTEXT" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN003">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="COUNTRYCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="COUNTRYTEXT" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN004">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CITYCODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CITYTEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="COUNTRYCODE" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEGEN005">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="UNITCODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="UNITTEXT" Type="varchar" MaxLength="80" />
+    <Property Name="ISMAINUNIT" Type="int" />
+    <Property Name="MAINUNITCODE" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEMAT001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEMATHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="MATDOCTYPE" />
+      <PropertyRef Name="MATDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="MATDOCFROM" Type="date" Nullable="false" />
+    <Property Name="MATDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="SUPPLYTYPE" Type="int" Nullable="false" />
+    <Property Name="STUNIT" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="NETWEIGHT" Type="decimal" Precision="12" Scale="3" />
+    <Property Name="NWUNIT" Type="varchar" MaxLength="3" />
+    <Property Name="BRUTWEIGHT" Type="decimal" Precision="12" Scale="3" />
+    <Property Name="BWUNIT" Type="varchar" MaxLength="3" />
+    <Property Name="ISBOM" Type="int" />
+    <Property Name="BOMDOCTYPE" Type="varchar" MaxLength="4" />
+    <Property Name="BOMDOCNUM" Type="varchar" MaxLength="25" />
+    <Property Name="ISROUTE" Type="int" />
+    <Property Name="ROTDOCTYPE" Type="varchar" MaxLength="4" />
+    <Property Name="ROTDOCNUM" Type="varchar" MaxLength="25" />
+    <Property Name="ISDELETED" Type="int" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEMATTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="MATDOCTYPE" />
+      <PropertyRef Name="MATDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="MATDOCFROM" Type="date" Nullable="false" />
+    <Property Name="MATDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="LANCODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="MATSTEXT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATLTEXT" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEOPR001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROT001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROTBOMCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ROTDOCFROM" Type="date" Nullable="false" />
+    <Property Name="ROTDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="OPRNUM" Type="int" Nullable="false" />
+    <Property Name="BOMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BOMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CONTENTNUM" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="COMPONENT" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="QUANTITY" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROTHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ROTDOCFROM" Type="date" Nullable="false" />
+    <Property Name="ROTDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="QUANTITY" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="ISDELETED" Type="int" />
+    <Property Name="ISPASSIVE" Type="int" />
+    <Property Name="DRAWNUM" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEROTOPRCONTENT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="ROTDOCTYPE" />
+      <PropertyRef Name="ROTDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ROTDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ROTDOCFROM" Type="date" Nullable="false" />
+    <Property Name="ROTDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MATDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="OPRNUM" Type="int" Nullable="false" />
+    <Property Name="WCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="OPRDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="SETUPTIME" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="MACHINETIME" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="LABOURTIME" Type="decimal" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCM001">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DOCTYPETEXT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMHEAD">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="WCMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="WCMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="MAINWCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MAINWCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="WORKTIME" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="ISDELETED" Type="int" />
+    <Property Name="ISPASSIVE" Type="int" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMOPR">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="WCMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="WCMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="OPRDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSMGRBCEWCMTEXT">
+    <Key>
+      <PropertyRef Name="COMCODE" />
+      <PropertyRef Name="WCMDOCTYPE" />
+      <PropertyRef Name="WCMDOCNUM" />
+    </Key>
+    <Property Name="COMCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCTYPE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WCMDOCNUM" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="WCMDOCFROM" Type="date" Nullable="false" />
+    <Property Name="WCMDOCUNTIL" Type="date" Nullable="false" />
+    <Property Name="LANCODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="WCMSTEXT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WCMLTEXT" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD">
+    <End Role="BSMGRBCEBOMHEAD" Type="Self.BSMGRBCEBOMHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BSMGRBCEBOMCONTENT" Type="Self.BSMGRBCEBOMCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEBOMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="BOMDOCTYPE" />
+        <PropertyRef Name="BOMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEBOMCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="BOMDOCTYPE" />
+        <PropertyRef Name="BOMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD">
+    <End Role="BSMGRBCECCMHEAD" Type="Self.BSMGRBCECCMHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BSMGRBCECCMTEXT" Type="Self.BSMGRBCECCMTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCECCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="CCMDOCTYPE" />
+        <PropertyRef Name="CCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCECCMTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="CCMDOCTYPE" />
+        <PropertyRef Name="CCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD">
+    <End Role="BSMGRBCEMATHEAD" Type="Self.BSMGRBCEMATHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BSMGRBCEMATTEXT" Type="Self.BSMGRBCEMATTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEMATHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="MATDOCTYPE" />
+        <PropertyRef Name="MATDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEMATTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="MATDOCTYPE" />
+        <PropertyRef Name="MATDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD">
+    <End Role="BSMGRBCEROTHEAD" Type="Self.BSMGRBCEROTHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BSMGRBCEROTBOMCONTENT" Type="Self.BSMGRBCEROTBOMCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEROTHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEROTBOMCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD">
+    <End Role="BSMGRBCEROTHEAD" Type="Self.BSMGRBCEROTHEAD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BSMGRBCEROTOPRCONTENT" Type="Self.BSMGRBCEROTOPRCONTENT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEROTHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEROTOPRCONTENT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="ROTDOCTYPE" />
+        <PropertyRef Name="ROTDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD">
+    <End Role="BSMGRBCEWCMHEAD" Type="Self.BSMGRBCEWCMHEAD" Multiplicity="1" />
+    <End Role="BSMGRBCEWCMOPR" Type="Self.BSMGRBCEWCMOPR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEWCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEWCMOPR">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD">
+    <End Role="BSMGRBCEWCMHEAD" Type="Self.BSMGRBCEWCMHEAD" Multiplicity="1" />
+    <End Role="BSMGRBCEWCMTEXT" Type="Self.BSMGRBCEWCMTEXT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BSMGRBCEWCMHEAD">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Principal>
+      <Dependent Role="BSMGRBCEWCMTEXT">
+        <PropertyRef Name="COMCODE" />
+        <PropertyRef Name="WCMDOCTYPE" />
+        <PropertyRef Name="WCMDOCNUM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KKPBCEModelStoreContainer">
+    <EntitySet Name="BSMGRBCEBOM001" EntityType="Self.BSMGRBCEBOM001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEBOMCONTENT" EntityType="Self.BSMGRBCEBOMCONTENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEBOMHEAD" EntityType="Self.BSMGRBCEBOMHEAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCECCM001" EntityType="Self.BSMGRBCECCM001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCECCMHEAD" EntityType="Self.BSMGRBCECCMHEAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCECCMTEXT" EntityType="Self.BSMGRBCECCMTEXT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEGEN001" EntityType="Self.BSMGRBCEGEN001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEGEN002" EntityType="Self.BSMGRBCEGEN002" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEGEN003" EntityType="Self.BSMGRBCEGEN003" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEGEN004" EntityType="Self.BSMGRBCEGEN004" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEGEN005" EntityType="Self.BSMGRBCEGEN005" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEMAT001" EntityType="Self.BSMGRBCEMAT001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEMATHEAD" EntityType="Self.BSMGRBCEMATHEAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEMATTEXT" EntityType="Self.BSMGRBCEMATTEXT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEOPR001" EntityType="Self.BSMGRBCEOPR001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEROT001" EntityType="Self.BSMGRBCEROT001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEROTBOMCONTENT" EntityType="Self.BSMGRBCEROTBOMCONTENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEROTHEAD" EntityType="Self.BSMGRBCEROTHEAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEROTOPRCONTENT" EntityType="Self.BSMGRBCEROTOPRCONTENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEWCM001" EntityType="Self.BSMGRBCEWCM001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEWCMHEAD" EntityType="Self.BSMGRBCEWCMHEAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEWCMOPR" EntityType="Self.BSMGRBCEWCMOPR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BSMGRBCEWCMTEXT" EntityType="Self.BSMGRBCEWCMTEXT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD" Association="Self.FK_BSMGRBCEBOMCONTENT_BSMGRBCEBOMHEAD">
+      <End Role="BSMGRBCEBOMHEAD" EntitySet="BSMGRBCEBOMHEAD" />
+      <End Role="BSMGRBCEBOMCONTENT" EntitySet="BSMGRBCEBOMCONTENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD" Association="Self.FK_BSMGRBCECCMTEXT_BSMGRBCECCMHEAD">
+      <End Role="BSMGRBCECCMHEAD" EntitySet="BSMGRBCECCMHEAD" />
+      <End Role="BSMGRBCECCMTEXT" EntitySet="BSMGRBCECCMTEXT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD" Association="Self.FK_BSMGRBCEMATTEXT_BSMGRBCEMATHEAD">
+      <End Role="BSMGRBCEMATHEAD" EntitySet="BSMGRBCEMATHEAD" />
+      <End Role="BSMGRBCEMATTEXT" EntitySet="BSMGRBCEMATTEXT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD" Association="Self.FK_BSMGRBCEROTBOMCONTENT_BSMGRBCEROTHEAD">
+      <End Role="BSMGRBCEROTHEAD" EntitySet="BSMGRBCEROTHEAD" />
+      <End Role="BSMGRBCEROTBOMCONTENT" EntitySet="BSMGRBCEROTBOMCONTENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD" Association="Self.FK_BSMGRBCEROTOPRCONTENT_BSMGRBCEROTHEAD">
+      <End Role="BSMGRBCEROTHEAD" EntitySet="BSMGRBCEROTHEAD" />
+      <End Role="BSMGRBCEROTOPRCONTENT" EntitySet="BSMGRBCEROTOPRCONTENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD" Association="Self.FK_BSMGRBCEWCMOPR_BSMGRBCEWCMHEAD">
+      <End Role="BSMGRBCEWCMHEAD" EntitySet="BSMGRBCEWCMHEAD" />
+      <End Role="BSMGRBCEWCMOPR" EntitySet="BSMGRBCEWCMOPR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD" Association="Self.FK_BSMGRBCEWCMTEXT_BSMGRBCEWCMHEAD">
+      <End Role="BSMGRBCEWCMHEAD" EntitySet="BSMGRBCEWCMHEAD" />
+      <End Role="BSMGRBCEWCMTEXT" EntitySet="BSMGRBCEWCMTEXT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<KurumsalProje.ViewModels.CostCenterViewModels.CostCenterViewModel>
+@{
+    ViewBag.Title = "Cost Center List";
+}
+
+<h2>Maliyet Merkezleri</h2>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firma Kodu</th>
+            <th>Maliyet Merkezi Tipi</th>
+            <th>Maliyet Merkezi Kodu</th>
+            <th>Dil Kodu</th>
+            <th>Kısa Açıklama</th>
+            <th>Geçerlilik Başlangıç</th>
+            <th>Geçerlilik Bitiş</th>
+            <th>Silindi mi ?</th>
+            <th>Pasif mi ?</th>
+            <th>Detay</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.COMCODE</td>
+                <td>@item.CCMDOCTYPE</td>
+                <td>@item.CCMDOCNUM</td>
+                <td>@item.LANCODE</td>
+                <td>@item.CCMSTEXT</td>
+                <td>@item.CCMDOCFROM.ToShortDateString()</td>
+                <td>@item.CCMDOCUNTIL.ToShortDateString()</td>
+                <td>@(item.ISDELETED == 1 ? "Evet" : "Hayır")</td>
+                <td>@(item.ISPASSIVE == 1 ? "Evet" : "Hayır")</td>
+                <td><a href="@Url.Action("Details", "CostCenter", new { comcode = item.COMCODE, ccmdoctype = item.CCMDOCTYPE, ccmdocnum = item.CCMDOCNUM })" class="btn btn-primary">Detaylar</a></td>
+                <td><a href="/CostCenter/Delete/@item.COMCODE" class="btn btn-danger">Sil</a></td>
+                <td><a href="@Url.Action("Edit", "CostCenter", new { comcode = item.COMCODE, ccmdoctype = item.CCMDOCTYPE, ccmdocnum = item.CCMDOCNUM })" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "CostCenter")" class="btn btn-success">Yeni Kayıt Ekle</a>
